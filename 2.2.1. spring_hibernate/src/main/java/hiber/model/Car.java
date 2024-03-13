@@ -10,14 +10,12 @@ public class Car implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @OneToOne
-    private User user;
     @Column
     private String model;
     @Column
     private int series;
-
+    @OneToOne
+    private User user;
 
     public Car(){}
 
